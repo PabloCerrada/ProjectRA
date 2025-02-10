@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VuforiaUnityInfo version="7.0">
+    <TargetSet version="5.0" toolVersion="2.8.1">
+        <CylinderTarget name="lata" version="3.0" targetId="f65ce2a369854f07a4feef776cb0f384" sideLength="5.420000" topDiameter="4.310000" bottomDiameter="4.310000" sideImage="lata.Body_scaled.jpg"/>
+    </TargetSet>
+</VuforiaUnityInfo>
