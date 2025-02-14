@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 using TMPro;
 
 public class GameManager : MonoBehaviour
@@ -21,6 +22,11 @@ public class GameManager : MonoBehaviour
     private float interval = 5;
     private float lastTime = 0;
     private TMP_Text textComp;
+
+    private Button myButtonRun;
+    private Button myButtonExit;
+    private Button myButtonAjustes;
+    private Button myButtonMenu;
     private void Awake()
     {
         if (_instance == null)
@@ -43,12 +49,15 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        time += Time.deltaTime;
-        if (time > lastTime + interval)
+        if (textComp != null)
         {
-            score++;
-            textComp.text = "SCORE - " + score;
-            lastTime = time;
+            time += Time.deltaTime;
+            if (time > lastTime + interval)
+            {
+                score++;
+                textComp.text = "SCORE - " + score;
+                lastTime = time;
+            }
         }
     }
 
@@ -59,6 +68,20 @@ public class GameManager : MonoBehaviour
         if (scene.name == "Jugar")
         {
             textComp = GameObject.Find("Score").GetComponent<TMP_Text>(); // Busca el componente en el mismo GameObject
+        }
+        else if (scene.name == "MenuPrincipal")
+        {
+            myButtonRun = GameObject.Find("ButtonRun").GetComponent<Button>(); // Busca el componente en el mismo GameObject
+            myButtonRun.onClick.AddListener(Jugar);
+            myButtonExit = GameObject.Find("ButtonExit").GetComponent<Button>(); // Busca el componente en el mismo GameObject
+            myButtonExit.onClick.AddListener(Exit);
+            myButtonAjustes = GameObject.Find("ButtonAjustes").GetComponent<Button>(); // Busca el componente en el mismo GameObject
+            myButtonAjustes.onClick.AddListener(Ajustes);
+        }
+        else if (scene.name == "Ajustes")
+        {
+            myButtonMenu = GameObject.Find("ButtonMenu").GetComponent<Button>(); // Busca el componente en el mismo GameObject
+            myButtonMenu.onClick.AddListener(Menu);
         }
     }
 
@@ -71,6 +94,17 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene("Jugar");
     }
+
+    public void Ajustes()
+    {
+        SceneManager.LoadScene("Ajustes");
+    }
+
+    public void Menu()
+    {
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+
     public void Exit()
     {
         Application.Quit();

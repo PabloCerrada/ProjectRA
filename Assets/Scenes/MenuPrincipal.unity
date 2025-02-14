@@ -204,19 +204,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 321502303}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1709988761}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Exit
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &321502303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,19 +325,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 626496048}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1709988761}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Jugar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &626496048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -686,19 +662,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1261689138}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1709988761}
-        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
-        m_MethodName: Jugar
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
 --- !u!114 &1261689138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,6 +792,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7aaf0e2a602d7544b490d5713359469, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myButtonRun: {fileID: 1261689137}
+  myButtonExit: {fileID: 321502302}
+  myButtonAjustes: {fileID: 626496047}
 --- !u!4 &1709988762
 Transform:
   m_ObjectHideFlags: 0
